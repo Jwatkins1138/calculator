@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>calculator</title>
+		<meta charset="UTF-8">
+        <link rel='stylesheet' href='style.css'>
+	</head>
+	<body>
+        <h1>calculator</h1>
+        <div id='calcBox'>
+            <div id='display'></div>
+            <div id='clearRow'>
+                <button id='clear'>clear</button>
+                <button id='divide' class='operator'>%</button>
+            </div>
+            <div id='topRow'>
+                <button id='7'>7</button>
+                <button id='8'>8</button>
+                <button id='9'>9</button>
+                
+                <button id='multiply' class='operator'>x</button>
+            </div>
+            <div id='upperRow'>
+                <button id='4'>4</button>
+                <button id='5'>5</button>
+                <button id='6'>6</button>
+                
+                <button id='subtract' class='operator'>-</button>
+            </div>
+            <div id='lowerRow'>
+                <button id='1'>1</button>
+                <button id='2'>2</button>
+                <button id='3'>3</button>
+                
+                <button id='add' class='operator'>+</button>
+            </div>
+            <div id='bottomRow'>
+                <button id='0'>0</button>
+                <button id='.'>.</button>
+                
+                <button id='operate'>=</button>
+            </div>
+        </div>
+        <script>
+            
+            let inputOne = '0';
+            let inputTwo = '0';
+            let solution = 0;
+            let operatorChoice = 'none';
+            let tempSolution = 0;
+            document.getElementById('display').innerHTML = inputOne;
+            
+            document.getElementById('9').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '9';
+                }
+                else{
+                inputOne += '9';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '9';
+                }
+                else{
+                inputTwo += '9';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('8').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '8';
+                }
+                else{
+                inputOne += '8';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '8';
+                }
+                else{
+                inputTwo += '8';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('7').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '7';
+                }
+                else{
+                inputOne += '7';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '7';
+                }
+                else{
+                inputTwo += '7';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('6').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '6';
+                }
+                else{
+                inputOne += '6';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '6';
+                }
+                else{
+                inputTwo += '6';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('5').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '5';
+                }
+                else{
+                inputOne += '5';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '5';
+                }
+                else{
+                inputTwo += '5';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('4').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '4';
+                }
+                else{
+                inputOne += '4';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '4';
+                }
+                else{
+                inputTwo += '4';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('3').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '3';
+                }
+                else{
+                inputOne += '3';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '3';
+                }
+                else{
+                inputTwo += '3';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('2').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '2';
+                }
+                else{
+                inputOne += '2';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '2';
+                }
+                else{
+                inputTwo += '2';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('1').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '1';
+                }
+                else{
+                inputOne += '1';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '1';
+                }
+                else{
+                inputTwo += '1';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('0').addEventListener('click', function() {
+                if(operatorChoice == 'none'){
+                if(inputOne == '0'){
+                    inputOne = '0';
+                }
+                else{
+                inputOne += '0';
+                }
+                document.getElementById('display').innerHTML = inputOne;
+            }
+            else{
+                if(inputTwo == '0'){
+                    inputTwo = '0';
+                }
+                else{
+                inputTwo += '0';
+                }
+                document.getElementById('display').innerHTML = inputTwo;
+            }
+            });
+            document.getElementById('add').addEventListener('click', function() {
+                if(operatorChoice == '+') {
+                    tempSolution = add(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '-') {
+                    tempSolution = subtract(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '*') {
+                    tempSolution = multiply(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '%') {
+                    tempSolution = divide(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                operatorChoice = '+'
+                document.getElementById('display').innerHTML = operatorChoice;
+            });
+            document.getElementById('subtract').addEventListener('click', function() {
+                if(operatorChoice == '+') {
+                    tempSolution = add(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '-') {
+                    tempSolution = subtract(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '*') {
+                    tempSolution = multiply(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '%') {
+                    tempSolution = add(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                operatorChoice = '-'
+                document.getElementById('display').innerHTML = operatorChoice;
+            });
+            document.getElementById('multiply').addEventListener('click', function() {
+                if(operatorChoice == '+') {
+                    tempSolution = add(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '-') {
+                    tempSolution = subtract(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '*') {
+                    tempSolution = multiply(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '%') {
+                    tempSolution = divide(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                operatorChoice = '*'
+                document.getElementById('display').innerHTML = operatorChoice;
+            });
+            document.getElementById('divide').addEventListener('click', function() {
+                if(operatorChoice == '+') {
+                    tempSolution = add(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '-') {
+                    tempSolution = subtract(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '*') {
+                    tempSolution = multiply(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                if(operatorChoice == '%') {
+                    tempSolution = divide(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = tempSolution.toString();
+                    inputTwo = '0';
+                }
+                operatorChoice = '%'
+                document.getElementById('display').innerHTML = operatorChoice;
+            });
+            document.getElementById('operate').addEventListener('click', function() {
+                if(operatorChoice == '+'){
+                    solution = add(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = '0';
+                    inputTwo = '0';
+                    operatorChoice = 'none';
+                }
+                if(operatorChoice == '-'){
+                    solution = subtract(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = '0';
+                    inputTwo = '0';
+                    operatorChoice = 'none';
+                }
+                if(operatorChoice == '*'){
+                    solution = multiply(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = '0';
+                    inputTwo = '0';
+                    operatorChoice = 'none';
+                }
+                if(operatorChoice == '%'){
+                    solution = divide(parseInt(inputOne), parseInt(inputTwo));
+                    inputOne = '0';
+                    inputTwo = '0';
+                    operatorChoice = 'none';
+                }
+                document.getElementById('display').innerHTML = solution;
+            });
+            document.getElementById('clear').addEventListener('click', function () {
+                inputOne = '0';
+                inputTwo = '0';
+                solution = 0;
+                operatorChoice = 'none';
+                document.getElementById('display').innerHTML = inputOne;
+            });
+                
+            function add(inputOne, inputTwo){
+                let sum = inputOne + inputTwo;
+                return sum;
+            }
+            function subtract(inputOne, inputTwo){
+                let diff = inputOne - inputTwo;
+                return diff;
+            }
+            function multiply(inputOne, inputTwo){
+                let prod = inputOne * inputTwo;
+                return prod;
+            }
+            function divide(inputOne, inputTwo){
+                let quotient = inputOne / inputTwo;
+                return quotient;
+            }
+            
+        </script>
+    </body>
