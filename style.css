@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    background-color: mistyrose;
+    font-family: 'Courier New', Courier, monospace;
+}
+#calcBox {
+    display: flex;
+    flex-direction: column;
+    height: 300 px;
+    background-color: black;
+    border: solid grey 4px;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    width: 180px;
+
+}
+#clearRow {
+    display: flex;
+
+}
+#display {
+    display: flex;
+    height: 40px;
+    border: solid grey 2px;
+    color: lime;
+    align-items:center
+
+}
+#topRow {
+    display: flex;
+    
+
+}
+#upperRow {
+    display: flex;
+    
+
+}
+#lowerRow {
+    display: flex;
+   
+
+}
+#bottomRow {
+    display: flex;
+    
+
+}
+button {
+background-color: darkslategray;
+color: lime;
+padding: 1.2em;
+flex: 1;
+border-radius: .3em;
+}
+.operator {
+    background-color: rgba(255, 166, 0, 0.364);
+}
+#operate {
+    background-color: orangered;
+    color: blue;
+}
+#clear {
+    flex: 11;
+    background-color: yellow;
+    color: blue;
+}
